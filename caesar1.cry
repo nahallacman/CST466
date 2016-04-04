@@ -1,0 +1,6 @@
+caesar : {n} ([8], String n) -> String n 
+caesar (s, msg) = [ shift x | x <- msg ] 
+      where map = ['A' .. 'Z'] <<< (26 - s) % 26     
+            shift c = map @(c - 'A')
+//      where map_lower = ['a' .. 'z'] <<< s
+//	        shift c = map_lower @ (c - 'a')
